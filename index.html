@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <title>Ejemplo ITS</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+</head>
+<body ng-app="demoApp">
+  <img src="es.jpg" width="100" heigth="100">
+  <center><h1 aling="center">Listado de Docentes</h1></center>
+  <form>
+    <center>
+       <input tipe="search"/>
+       <button tipe= "submit" C >BUSCAR</button>
+    </center>
+   
+  </form>
+     <table class="table" border=3 background color="pink">
+    <tr>
+      <td>idProfesor</td>
+      <td>Nombre</td>
+      <td>Apellido</td>
+    </tr>
+    <tbody ng-controller="listadoCtrl">
+      <tr ng-repeat="elemento in elementos" class="teble-active">
+        <td >{{elemento.pkProfesor}}</td>
+        <td >{{elemento.nomProfesor}}</td>
+        <td >{{elemento.apellidoProfesor}}</td>
+
+      </tr>
+
+    </tbody>
+   </table>
+  <!-- Scripts relativos a angular y componentes que requiere nuestra aplicación -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.js"></script>
+
+  <!-- Scripts propios de nuestra aplicación -->
+  <script src="app.js"></script>
+  <script src="controller/controler.js"></script>
+
+  
+</body>
+</html>
